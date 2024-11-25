@@ -115,6 +115,8 @@ function App() {
     datasets: [
       {
         label: '温度',
+        spanGaps: true,
+        pointRadius: 4,
         data: tempList,
         borderColor: 'rgb(255, 99, 132)',
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
@@ -122,6 +124,8 @@ function App() {
       },
       {
         label: '湿度',
+        spanGaps: true,
+        pointRadius: 4,
         data: humiList,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
