@@ -140,8 +140,8 @@ function App() {
       {/* <header className="flex justify-between py-5 bg-slate-100 w-full"> */}
         <h1 className="ml-10 text-3xl text-white">温度・湿度</h1>
       </header>
-      <div className="h-20 bg-gradient-to-t from-slate-950 to-slate-300"></div>
-      <div className="flex p-10 place-content-center w-full h-[calc(100vh-156px)] text-white text-2xl bg-slate-950">
+      <div className="h-10 bg-gradient-to-t from-slate-950 to-slate-300"></div>
+      <div className="flex p-16 place-content-center w-full h-[calc(100vh-116px)] text-white text-2xl bg-slate-950">
         {
           loading ? (
             <h3 className="text-center text-xl">Loading</h3>
