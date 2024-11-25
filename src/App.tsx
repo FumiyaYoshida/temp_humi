@@ -107,7 +107,7 @@ function App() {
         },
       },
     },
-  };
+  } as any;
   
   const labels = dtList;
   const temp_humi_data = {
@@ -128,7 +128,7 @@ function App() {
         yAxisID: "yright"
       }
     ],
-  } as any;
+  };
 
   return (
     <main className="mx-auto w-full h-screen">
