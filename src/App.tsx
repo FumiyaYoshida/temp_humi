@@ -157,7 +157,7 @@ function App() {
         yAxisID: "yright"
       }
     ],
-  };
+  } as any;
 
   return (
     <main className="mx-auto w-full h-screen">
