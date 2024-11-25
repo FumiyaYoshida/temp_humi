@@ -23,35 +23,6 @@ ChartJS.register(
   Legend
 );
 
-const calculateYAxisMax = (value: number): number => {
-  // 値に対する補正を行う
-  let adjustedValue =
-    value >= 0 ? Math.ceil(value * 1.05) : Math.floor(value * 0.95);
-
-  // 1桁の場合の処理
-  if (Math.abs(value) < 10) {
-    return value >= 0 ? (value < 5 ? 0 : 5) : value > -5 ? -5 : -10;
-  }
-
-  // 2桁の場合は5の倍数に四捨五入（負の数の場合は特別な処理）
-  if (Math.abs(adjustedValue) >= 10 && Math.abs(adjustedValue) < 100) {
-    if (adjustedValue < 0) {
-      // 負の数の場合は前の「5で割り切れるより大きい数」にする
-      return Math.floor(adjustedValue / 5) * 5;
-    }
-    // 正の数の場合は次の「5で割り切れるより大きい数」にする
-    return Math.ceil(adjustedValue / 5) * 5;
-  }
-
-  // 桁数に応じて四捨五入し、整数でキリのいい数字にする
-  const magnitude = Math.pow(
-    10,
-    Math.floor(Math.log10(Math.abs(adjustedValue))) -
-      (Math.abs(adjustedValue) < 1000 ? 1 : 2)
-  );
-  return Math.round(adjustedValue / magnitude) * magnitude;
-};
-
 function App() {
   const [loading, setLoading] = useState(true);
   const [dtList, setDtList] = useState<string[]>([]);
